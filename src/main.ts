@@ -2,6 +2,7 @@ import {NestFactory} from '@nestjs/core';
 import {AppModule} from './app.module';
 import * as helmet from 'helmet';
 import * as csurf from 'csurf';
+import * as compression from 'compression';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { VersioningType } from "@nestjs/common";
 
@@ -11,6 +12,7 @@ async function bootstrap() {
     //app.use(csurf());
     app.enableCors();
     app.use(helmet());
+    app.use(compression());
     app.enableVersioning({
         type: VersioningType.URI
     });

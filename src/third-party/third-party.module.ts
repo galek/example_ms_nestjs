@@ -1,11 +1,13 @@
-import { Module } from '@nestjs/common';
-import { AppController } from "../app.controller";
-import { AppService } from "../app.service";
-import { HttpModule } from "@nestjs/axios";
+import {Module} from '@nestjs/common';
+import {HttpModule} from "@nestjs/axios";
+import {EventEmitterModule} from "@nestjs/event-emitter";
 
 @Module({
-    imports: [HttpModule],
-    controllers: [AppController],
-    providers: [AppService],
+    imports: [
+        HttpModule,
+        EventEmitterModule.forRoot()],
+    controllers: [],
+    providers: [],
 })
-export class ThirdPartyModule {}
+export class ThirdPartyModule {
+}
