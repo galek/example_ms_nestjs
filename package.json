@@ -1,8 +1,8 @@
 {
-  "name": "example",
-  "version": "0.0.1",
-  "description": "",
-  "author": "Nick Galko",
+  "name": "GalekSoftExampleService",
+  "version": "1.0.0",
+  "description": "GalekSoft http microservice example, based on express-nestjs",
+  "author": "GalekSoft: Nick Galko",
   "private": true,
   "license": "MIT",
   "scripts": {
