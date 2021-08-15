@@ -5,6 +5,7 @@ import * as csurf from 'csurf';
 import * as compression from 'compression';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { VersioningType } from "@nestjs/common";
+import {SentryLogger} from "./utils/sentryLogger";
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
@@ -16,6 +17,8 @@ async function bootstrap() {
     app.enableVersioning({
         type: VersioningType.URI
     });
+
+    SentryLogger.InitSentry("", app)
 
     const config = new DocumentBuilder()
         .setTitle('Galek example of http microservice')

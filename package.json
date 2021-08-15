@@ -28,6 +28,8 @@
     "@nestjs/event-emitter": "^1.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/swagger": "^5.0.9",
+    "@sentry/node": "^6.11.0",
+    "@sentry/tracing": "^6.11.0",
     "compression": "^1.7.4",
     "csurf": "^1.11.0",
     "helmet": "^4.6.0",
